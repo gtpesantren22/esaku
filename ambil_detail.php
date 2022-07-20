@@ -35,7 +35,7 @@ $hrmdt2 = mysqli_fetch_assoc(mysqli_query($conn, "SELECT SUM(nominal) AS jm_amb,
                             <span class="badge badge-pill badge-warning ">Komplek : <?= $hrmdt['komplek']; ?></span>
                             <span class="badge badge-pill badge-danger ">Total : <?= rupiah($hrmdt2['jm_amb']); ?></span>
                             <button type="submit" name="updd" class="btn btn-success btn-sm btn-rounded float-right"><i class="fa fa-check-circle"></i> Simpan Perubahan</button>
-                            <a href="cetak.php" class="btn btn-info btn-sm btn-rounded float-right" type="submit" name="updd"><i class="fa fa-print"></i> Catak</a>
+                            <a href="cetak.php?kode=<?= $kode; ?>" target="_blank" class="btn btn-info btn-sm btn-rounded float-right"><i class="fa fa-print"></i> Catak</a>
                         </form>
                     </h4>
                     <div class="row">

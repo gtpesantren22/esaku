@@ -127,7 +127,7 @@ if (isset($_POST['save'])) {
                     Swal.fire({
                         icon: 'error',
                         title: 'Gagal',
-                        text: 'Komlek ini sudah melakukan pengambilan pada tanggal ini'
+                        text: 'Komplek ini sudah melakukan pengambilan pada tanggal ini'
                     })
                     var millisecondsToWait = 2000;
                     setTimeout(function() {
