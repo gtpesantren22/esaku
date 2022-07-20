@@ -1,4 +1,20 @@
 <?php
+
+session_start();
+include 'koneksi.php';
+
+if (!isset($_SESSION['qwertyuiop-esakau12038835883848854'])) {
+    echo "
+    <script>
+    alert('Silahkan login dulu');
+    window.location = 'login.php';
+    </script>
+    ";
+}
+
+$nama_user = $_SESSION['nama'];
+$level_user = $_SESSION['level'];
+
 $bulan = array("", "Januari", "Februari", "Maret", "April", "Mei", "Juni", "July", "Agustus", "September", "Oktober", "November", "Desember");
 function rupiah($angka)
 {
@@ -183,7 +199,7 @@ function rupiah2($angka)
                                 Settings
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item">
+                            <a class="dropdown-item" href="logout.php">
                                 <i class="fas fa-power-off text-primary"></i>
                                 Logout
                             </a>
